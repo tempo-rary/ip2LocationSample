@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://ws.apache.org/axis2" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://ws.apache.org/axis2">
+    <wsdl:types>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ws.apache.org/axis2">
+            <xs:element name="add">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="args1" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="get">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="args0" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="addRequest">
+        <wsdl:part name="parameters" element="ns:add"/>
+    </wsdl:message>
+    <wsdl:message name="getRequest">
+        <wsdl:part name="parameters" element="ns:get"/>
+    </wsdl:message>
+    <wsdl:message name="getResponse">
+        <wsdl:part name="parameters" element="ns:getResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="IIp2LocationPortType">
+        <wsdl:operation name="add">
+            <wsdl:input message="ns:addRequest" wsaw:Action="urn:add"/>
+        </wsdl:operation>
+        <wsdl:operation name="get">
+            <wsdl:input message="ns:getRequest" wsaw:Action="urn:get"/>
+            <wsdl:output message="ns:getResponse" wsaw:Action="urn:getResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="IIp2LocationSoap11Binding" type="ns:IIp2LocationPortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="add">
+            <soap:operation soapAction="urn:add" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="get">
+            <soap:operation soapAction="urn:get" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="IIp2LocationSoap12Binding" type="ns:IIp2LocationPortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="add">
+            <soap12:operation soapAction="urn:add" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="get">
+            <soap12:operation soapAction="urn:get" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="IIp2LocationHttpBinding" type="ns:IIp2LocationPortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="add">
+            <http:operation location="add"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="get">
+            <http:operation location="get"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="IIp2Location">
+        <wsdl:port name="IIp2LocationHttpSoap11Endpoint" binding="ns:IIp2LocationSoap11Binding">
+            <soap:address location="http://localhost:9090/axis2/services/IIp2Location"/>
+        </wsdl:port>
+        <wsdl:port name="IIp2LocationHttpSoap12Endpoint" binding="ns:IIp2LocationSoap12Binding">
+            <soap12:address location="http://localhost:9090/axis2/services/IIp2Location"/>
+        </wsdl:port>
+        <wsdl:port name="IIp2LocationHttpEndpoint" binding="ns:IIp2LocationHttpBinding">
+            <http:address location="http://localhost:9090/axis2/services/IIp2Location"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

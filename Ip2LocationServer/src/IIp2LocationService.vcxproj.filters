@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{6c4ebfef-e8a6-4802-8b70-59ae507656e8}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{e7ed15ab-e3d7-4f29-ac9b-62c4dcdbc2e1}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{5103ba94-742f-42be-99ac-ba80608bf01a}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="axis2_extension_mapper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="axis2_svc_skel_IIp2Location.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="axis2_skel_IIp2Location.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="adb_get.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="adb_getResponse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="adb_add.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db_helper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="axis2_extension_mapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="axis2_skel_IIp2Location.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="adb_get.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="adb_getResponse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="adb_add.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="db_helper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\resources\services.xml">
+      <Filter>Resource Files</Filter>
+    </Xml>
+  </ItemGroup>
+</Project>

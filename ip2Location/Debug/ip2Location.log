@@ -1,0 +1,21 @@
+﻿Build started 10/17/2015 10:30:40 AM.
+     1>Project "C:\Users\Ole\Documents\Visual Studio 2013\Projects\ip2Location\ip2Location\ip2Location.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ip2Location.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I. /IC:\ws\axis2c\include /IC:\ws\axis2c\include\platforms /ZI /nologo /W3 /WX- /sdl- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ip2Location.cpp
+         ip2Location.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ole\Documents\Visual Studio 2013\Projects\ip2Location\Debug\ip2location.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\ws\axis2c\lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib axiom.lib axutil.lib axis2_engine.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Ole\Documents\Visual Studio 2013\Projects\ip2Location\Debug\ip2location.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Ole\Documents\Visual Studio 2013\Projects\ip2Location\Debug\ip2location.lib" /MACHINE:X86 Debug\adb_add.obj
+         Debug\adb_get.obj
+         Debug\adb_getResponse.obj
+         Debug\axis2_extension_mapper.obj
+         Debug\axis2_stub_IIp2Location.obj
+         Debug\ip2Location.obj
+         Debug\Ip2LocationClient.obj
+         Debug\stdafx.obj
+         ip2Location.vcxproj -> C:\Users\Ole\Documents\Visual Studio 2013\Projects\ip2Location\Debug\ip2location.exe
+     1>Done Building Project "C:\Users\Ole\Documents\Visual Studio 2013\Projects\ip2Location\ip2Location\ip2Location.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.04

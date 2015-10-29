@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was auto-generated from WSDL -->
+<!-- by the Apache Axis2 version: 1.6.3  Built on : Jun 27, 2015 (11:17:49 BST) -->
+<service name="IIp2Location">
+    <parameter name="ServiceClass">IIp2Location</parameter>
+    <description>IIp2Location Service
+            </description>
+    <operation name="get" mep="http://www.w3.org/2004/08/wsdl/in-out">
+        <parameter name="wsamapping">urn:get</parameter>
+    </operation>
+    <operation name="add" mep="http://www.w3.org/2004/08/wsdl/in-only">
+        <parameter name="wsamapping">urn:add</parameter>
+    </operation>
+</service>
